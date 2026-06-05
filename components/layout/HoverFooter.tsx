@@ -119,12 +119,11 @@ export default function HoverFooter() {
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full border border-gold/60 flex items-center justify-center">
-                <span className="text-gold text-[10px] font-semibold tracking-widest">NA</span>
-              </div>
-              <span className="text-white text-xl font-bold tracking-wide uppercase">
-                Neo
-              </span>
+              <img 
+                src="/images/Logo.png" 
+                alt="Neo Ayushveda Logo" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-sm text-cream/60 leading-relaxed font-jakarta">
               Blending ancient healing traditions with contemporary technology to coordinate global pharmaceutical exports.

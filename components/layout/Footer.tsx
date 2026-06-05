@@ -27,13 +27,11 @@ export default function Footer() {
           {/* Column 1 - Brand */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full border border-gold/60 flex items-center justify-center">
-                <span className="text-gold text-xs font-semibold tracking-widest">NA</span>
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-gold/80">Neo</span>
-                <span className="text-[13px] font-semibold tracking-[0.1em] uppercase text-cream">Ayushveda</span>
-              </div>
+              <img 
+                src="/images/Logo.png" 
+                alt="Neo Ayushveda Logo" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="font-playfair italic text-cream/50 text-[18px] leading-relaxed">
               "Healing Traditions.<br />Modern Technology."

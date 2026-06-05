@@ -385,18 +385,18 @@ export default function Home() {
               <div className="aspect-square bg-[#122A1C] border border-white/10 relative overflow-hidden flex items-center justify-center shadow-2xl">
                 {/* Visual texture lines */}
                 <div className="absolute inset-0 bg-radial-gradient opacity-10" />
-                {/* Monogram inside */}
-                <span className="text-[120px] font-playfair font-bold text-[#1C3D28]/45 absolute bottom-4 right-4 pointer-events-none select-none">
-                  AKE
-                </span>
+                
+                {/* Main Image */}
+                <img 
+                  src="/images/Founder.jpeg" 
+                  alt="Anil Kumar Eravathri - Managing Director" 
+                  className="w-full h-full object-cover object-top"
+                />
                 
                 {/* Director Badge */}
-                <div className="absolute top-4 left-4 bg-gold text-emerald text-[9px] font-semibold tracking-[0.2em] uppercase px-3.5 py-1.5 shadow-md">
+                <div className="absolute top-4 left-4 bg-gold text-emerald text-[9px] font-semibold tracking-[0.2em] uppercase px-3.5 py-1.5 shadow-md z-10">
                   Managing Director
                 </div>
-                
-                {/* Subtle silhouette ornament */}
-                <Compass size={140} className="text-[#152F20] stroke-1" />
               </div>
             </div>
 
