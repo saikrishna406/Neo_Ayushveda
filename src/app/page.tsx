@@ -382,7 +382,7 @@ export default function Home() {
             
             {/* Avatar Frame (col-span-4) */}
             <div className="lg:col-span-4 reveal-left">
-              <div className="aspect-square bg-[#122A1C] border border-white/10 relative overflow-hidden flex items-center justify-center shadow-2xl">
+              <div className="aspect-[3/4] bg-[#122A1C] border border-white/10 relative overflow-hidden flex items-center justify-center shadow-2xl">
                 {/* Visual texture lines */}
                 <div className="absolute inset-0 bg-radial-gradient opacity-10" />
                 
