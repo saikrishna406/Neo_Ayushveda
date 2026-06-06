@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { 
   Sparkles, 
@@ -206,10 +207,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-white p-3 border border-emerald/5">
               <div className="relative w-full h-full overflow-hidden bg-[#0A1A12]">
                 {/* Main Image */}
-                <img 
+                <Image 
                   src="/images/hero_pharma_botanical.png" 
                   alt="Neo Ayushveda Premium Pharmaceutical Sourcing"
-                  className="w-full h-full object-cover transition-transform duration-[1000ms] group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  className="object-cover transition-transform duration-[1000ms] group-hover:scale-105"
+                  priority
                 />
                 
                 {/* Subtle dark green vignette overlay */}
@@ -387,10 +391,13 @@ export default function Home() {
                 <div className="absolute inset-0 bg-radial-gradient opacity-10" />
                 
                 {/* Main Image */}
-                <img 
+                <Image 
                   src="/images/Founder.jpeg" 
                   alt="Anil Kumar Eravathri - Managing Director" 
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover object-top"
+                  priority
                 />
                 
                 {/* Director Badge */}
