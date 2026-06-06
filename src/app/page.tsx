@@ -295,26 +295,7 @@ export default function Home() {
                 Our technical strength lies in our dedicated regulatory affairs department. We coordinate import licensing, MOH permit approvals, and compile complete product registration dossiers in Common Technical Document (CTD) formats to secure market entries swiftly.
               </p>
             </div>
-            
-            {/* Directives list */}
-            <div className="grid grid-cols-2 gap-y-4 pt-10 border-t border-emerald/10 mt-10">
-              <div className="flex items-center gap-3">
-                <CheckCircleIcon />
-                <span className="text-[13px] tracking-wider uppercase font-semibold text-ink-mid">50+ Countries Served</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircleIcon />
-                <span className="text-[13px] tracking-wider uppercase font-semibold text-ink-mid">10 Core Divisions</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircleIcon />
-                <span className="text-[13px] tracking-wider uppercase font-semibold text-ink-mid">100% Certified Chain</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircleIcon />
-                <span className="text-[13px] tracking-wider uppercase font-semibold text-ink-mid">CTD Dossier Readiness</span>
-              </div>
-            </div>
+
           </div>
 
           {/* Right Column: Capabilities Card Matrix */}
@@ -535,7 +516,7 @@ export default function Home() {
       <section id="certifications" className="bg-cream py-16 border-b border-emerald/10">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-px bg-emerald/10 border border-emerald/10 shadow-sm reveal">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-px bg-emerald/10 border border-emerald/10 shadow-sm">
             {[
               "WHO-GMP",
               "EU-GMP",
@@ -549,7 +530,8 @@ export default function Home() {
             ].map((cert, idx) => (
               <div 
                 key={idx}
-                className="bg-cream px-6 py-10 text-center flex flex-col items-center justify-center hover:bg-gold-pale transition-colors duration-300"
+                className="bg-cream px-6 py-10 text-center flex flex-col items-center justify-center hover:bg-gold-pale transition-colors duration-300 reveal"
+                style={{ transitionDelay: `${(idx % 9) * 80}ms` }}
               >
                 <ShieldCheck size={24} className="text-ink/30 mb-3 mx-auto" />
                 <span className="text-[11px] tracking-[0.2em] uppercase font-semibold text-ink/75">
@@ -579,14 +561,14 @@ export default function Home() {
           </div>
 
           {/* Stepper container */}
-          <div className="relative mt-16 reveal">
+          <div className="relative mt-16">
             {/* Connecting line on desktop */}
             <div className="hidden lg:block absolute top-6 left-12 right-12 h-px bg-emerald/10 z-0" />
             
             {/* Step list */}
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
               {workflowSteps.map((step, idx) => (
-                <div key={idx} className="flex flex-col items-center lg:items-start text-center lg:text-left group relative">
+                <div key={idx} className="flex flex-col items-center lg:items-start text-center lg:text-left group relative reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
                   
                   {/* Circle Step */}
                   <div className="w-12 h-12 rounded-full border border-emerald/10 bg-white flex items-center justify-center shadow-md group-hover:border-gold group-hover:bg-gold-pale transition-all duration-300">
@@ -634,10 +616,10 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Card 1 */}
-            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300">
+            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300 reveal delay-100">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
                 <Scale size={20} />
               </div>
@@ -648,7 +630,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300">
+            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300 reveal delay-200">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
                 <ShieldCheck size={20} />
               </div>
@@ -659,7 +641,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300">
+            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300 reveal delay-300">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
                 <Zap size={20} />
               </div>
@@ -670,7 +652,7 @@ export default function Home() {
             </div>
 
             {/* Card 4 */}
-            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300">
+            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300 reveal delay-400">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
                 <Clock size={20} />
               </div>
@@ -799,7 +781,7 @@ export default function Home() {
             </div>
 
             {/* Right Panel - Enquiry Form (col-span-3) */}
-            <div className="lg:col-span-3 reveal">
+            <div className="lg:col-span-3 reveal-right">
               <div className="bg-white border border-emerald/10 p-8 md:p-10 shadow-2xl relative">
                 
                 {formSubmitted && (
@@ -992,15 +974,6 @@ export default function Home() {
 
       <HoverFooter />
     </>
-  );
-}
-
-// Icon Helpers
-function CheckCircleIcon() {
-  return (
-    <svg className="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7"></path>
-    </svg>
   );
 }
 
