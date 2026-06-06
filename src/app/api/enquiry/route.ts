@@ -14,11 +14,14 @@ export async function POST(request: Request) {
     }
 
     // Prepare payload (convert docs array to a clean string format for spreadsheet display)
+    const phoneVal = (data.phone || "").trim();
+    const formattedPhone = phoneVal.startsWith("+") ? `'${phoneVal}` : phoneVal;
+
     const payload = {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
-      phone: data.phone,
+      phone: formattedPhone,
       company: data.company,
       country: data.country,
       category: data.category,

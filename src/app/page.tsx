@@ -63,6 +63,7 @@ export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formSubmitting, setFormSubmitting] = useState(false);
   const [formError, setFormError] = useState("");
+  const [phoneCode, setPhoneCode] = useState("+91");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -73,6 +74,27 @@ export default function Home() {
     category: "Pharmaceutical Generics",
     message: ""
   });
+
+  const countryCodes = [
+    { code: "+91", label: "IN" },
+    { code: "+971", label: "AE" },
+    { code: "+1", label: "US" },
+    { code: "+44", label: "GB" },
+    { code: "+966", label: "SA" },
+    { code: "+974", label: "QA" },
+    { code: "+63", label: "PH" },
+    { code: "+62", label: "ID" },
+    { code: "+84", label: "VN" },
+    { code: "+254", label: "KE" },
+    { code: "+234", label: "NG" },
+    { code: "+20", label: "EG" },
+    { code: "+49", label: "DE" },
+    { code: "+55", label: "BR" },
+    { code: "+7", label: "KZ" },
+    { code: "+998", label: "UZ" },
+    { code: "+94", label: "LK" },
+    { code: "+27", label: "ZA" },
+  ];
 
   // Chip Select State
   const [selectedDocs, setSelectedDocs] = useState<string[]>([]);
@@ -109,6 +131,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           ...formData,
+          phone: `${phoneCode} ${formData.phone}`,
           selectedDocs,
         }),
       });
@@ -885,15 +908,28 @@ export default function Home() {
 
                     <div className="flex flex-col">
                       <label htmlFor="phone" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Phone / WhatsApp</label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        required
-                        placeholder="e.g. +1 (555) 012-3456"
-                        className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      />
+                      <div className="flex gap-2 items-baseline">
+                        <select
+                          className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink focus:border-gold focus:ring-0 focus:outline-none transition-colors w-20 shrink-0"
+                          value={phoneCode}
+                          onChange={(e) => setPhoneCode(e.target.value)}
+                        >
+                          {countryCodes.map((c, i) => (
+                            <option key={i} value={c.code} className="text-ink bg-cream">
+                              {c.label} ({c.code})
+                            </option>
+                          ))}
+                        </select>
+                        <input
+                          id="phone"
+                          type="tel"
+                          required
+                          placeholder="e.g. 9032550436"
+                          className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors flex-grow"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        />
+                      </div>
                     </div>
                   </div>
 
