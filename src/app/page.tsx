@@ -710,6 +710,9 @@ export default function Home() {
                       <a href="tel:+914035247813" className="text-[15px] font-semibold text-white hover:text-gold transition-colors">
                         040-35247813
                       </a>
+                      <a href="tel:+918712443610" className="text-[15px] font-semibold text-white hover:text-gold transition-colors">
+                        +91 87124 43610
+                      </a>
                     </div>
                   </div>
 

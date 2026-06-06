@@ -59,6 +59,11 @@ export default function HoverFooter() {
       href: "tel:+914035247813",
     },
     {
+      icon: <Phone size={16} className="text-gold" />,
+      text: "+91 87124 43610",
+      href: "tel:+918712443610",
+    },
+    {
       icon: <MapPin size={16} className="text-gold" />,
       text: "Banjara Hills, Hyderabad, India",
     },
