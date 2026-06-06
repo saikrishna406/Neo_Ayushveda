@@ -61,6 +61,8 @@ export default function Home() {
 
   // Form State
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitting, setFormSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -93,22 +95,47 @@ export default function Home() {
     }
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API request
-    setFormSubmitted(true);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      country: "UAE",
-      category: "Pharmaceutical Generics",
-      message: ""
-    });
-    setSelectedDocs([]);
-    setTimeout(() => setFormSubmitted(false), 8000);
+    setFormSubmitting(true);
+    setFormError("");
+    setFormSubmitted(false);
+
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          selectedDocs,
+        }),
+      });
+
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.error || "Failed to transmit enquiry.");
+      }
+
+      setFormSubmitted(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        country: "UAE",
+        category: "Pharmaceutical Generics",
+        message: ""
+      });
+      setSelectedDocs([]);
+      setTimeout(() => setFormSubmitted(false), 8000);
+    } catch (error: any) {
+      setFormError(error.message || "An unexpected network error occurred. Please verify your connection.");
+    } finally {
+      setFormSubmitting(false);
+    }
   };
 
   const scrollTo = (id: string) => {
@@ -799,6 +826,17 @@ export default function Home() {
                   </div>
                 )}
 
+                {formError && (
+                  <div className="bg-red-500/10 border border-red-500/30 text-red-600 p-6 mb-8 flex items-start gap-3 animate-fade-in text-xs leading-relaxed">
+                    <div>
+                      <h4 className="text-sm font-semibold tracking-wide uppercase text-red-700">TRANSMISSION FAILED</h4>
+                      <p className="mt-1">
+                        {formError}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 <form onSubmit={handleFormSubmit} className="space-y-6">
 
                   {/* Row 1 - Names */}
@@ -956,9 +994,10 @@ export default function Home() {
                   <div className="pt-4">
                     <button
                       type="submit"
-                      className="bg-emerald text-gold px-8 py-4 text-[12px] tracking-[0.2em] uppercase font-semibold hover:bg-emerald-soft transition-colors w-full flex items-center justify-center gap-3 shadow-lg"
+                      disabled={formSubmitting}
+                      className="bg-emerald text-gold px-8 py-4 text-[12px] tracking-[0.2em] uppercase font-semibold hover:bg-emerald-soft transition-colors w-full flex items-center justify-center gap-3 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      SEND ENQUIRY <ArrowRight size={14} />
+                      {formSubmitting ? "TRANSMITTING..." : "SEND ENQUIRY"} {!formSubmitting && <ArrowRight size={14} />}
                     </button>
                     <p className="text-[10px] text-ink/35 text-center mt-4 font-jakarta tracking-wide">
                       We typically respond within 24–48 business hours. All enquiries are treated with strict commercial confidentiality.
