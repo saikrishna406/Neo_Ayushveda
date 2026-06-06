@@ -22,7 +22,7 @@ import {
   Compass
 } from "lucide-react";
 import Header from "../../components/layout/Header";
-import HoverFooter from "../../components/layout/HoverFooter";
+import Footer from "../../components/layout/Footer";
 
 // Loader Skeleton for MapLibre
 function MapSkeleton() {
@@ -1045,7 +1045,7 @@ export default function Home() {
         </div>
       </section>
 
-      <HoverFooter />
+      <Footer />
     </>
   );
 }
