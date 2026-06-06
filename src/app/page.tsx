@@ -974,7 +974,8 @@ export default function Home() {
                         {[
                           "APIs", "Ayurvedic Medicines", "Bulk Drugs / RSM",
                           "Cosmeceuticals", "Herbal Nutraceuticals", "Medical Devices",
-                          "Multiple Categories", "Pharmaceutical Generics", "Specialty Therapeutics"
+                          "Multiple Categories", "Pharmaceutical Generics", "Specialty Therapeutics",
+                          "Other"
                         ].map((cat, i) => (
                           <option key={i} value={cat} className="text-ink bg-cream">{cat}</option>
                         ))}
