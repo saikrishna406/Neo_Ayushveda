@@ -992,7 +992,7 @@ const productsList = [
   {
     num: "02",
     category: "Rx / OTC",
-    title: "Pharmaceutical Generics (OTC)",
+    title: "Specialty Therapeutics",
     desc: "Exporting therapeutic solutions including oncology treatments, diabetes care, HIV/AIDS, tuberculosis (TB), critical care medicines, cardiovascular care, injectables, vaccines, and daily nutraceuticals.",
     tags: [
       "Oncology",
@@ -1019,7 +1019,7 @@ const productsList = [
     num: "04",
     category: "Specialty Rx",
     title: "Injectable Vaccines",
-    desc: "Critical care injectables, vials, pre-filled syringes, and high-safety vaccines processed under strict aseptic cleanroom environments.",
+    desc: "We found all pharmaceuticals for Anti Diseases, Critical care injectables, vials, pre-filled syringes, and high-safety vaccines processed under strict aseptic cleanroom environments.",
     tags: ["Injectables", "Vaccines", "Critical Care"],
     bgImage: "/images/prod_injectables.png"
   },
