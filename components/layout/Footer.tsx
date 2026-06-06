@@ -147,7 +147,21 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-cream/30">
-          <span>© {new Date().getFullYear()} Neo Ayushveda Pvt Ltd. All rights reserved.</span>
+          <div className="flex items-center gap-2 flex-wrap justify-center md:justify-start">
+            <span>© {new Date().getFullYear()} Neo Ayushveda Pvt Ltd. All rights reserved.</span>
+            <span className="text-white/10 hidden md:inline">|</span>
+            <span>
+              Designed by{" "}
+              <a 
+                href="https://www.creat8rlabs.site/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-cream/50 hover:text-gold transition-colors font-semibold"
+              >
+                creat8rlabs
+              </a>
+            </span>
+          </div>
           <span className="tracking-wide">
             Made in India <span className="mx-1.5 text-gold/30">◆</span> Trusted Worldwide <span className="mx-1.5 text-gold/30">◆</span> Registered: Hyderabad, Telangana
           </span>
