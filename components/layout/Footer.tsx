@@ -151,7 +151,7 @@ export default function Footer() {
             <span>© {new Date().getFullYear()} Neo Ayushveda Pvt Ltd. All rights reserved.</span>
             <span className="text-white/10 hidden md:inline">|</span>
             <span>
-              Designed by{" "}
+              Designed by&nbsp;
               <a 
                 href="https://www.creat8rlabs.site/" 
                 target="_blank" 
