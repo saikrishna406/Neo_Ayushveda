@@ -186,7 +186,7 @@ export default function Home() {
                 <div className="text-[11px] tracking-[0.1em] uppercase text-cream/40 mt-1">Certified Sourcing</div>
               </div>
               <div className="border-l border-cream/10 pl-6">
-                <div className="text-[22px] font-semibold text-cream">8</div>
+                <div className="text-[22px] font-semibold text-cream">10</div>
                 <div className="text-[11px] tracking-[0.1em] uppercase text-cream/40 mt-1">Product Groups</div>
               </div>
             </div>
@@ -302,7 +302,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircleIcon />
-                <span className="text-[13px] tracking-wider uppercase font-semibold text-ink-mid">8 Core Divisions</span>
+                <span className="text-[13px] tracking-wider uppercase font-semibold text-ink-mid">10 Core Divisions</span>
               </div>
               <div className="flex items-center gap-3">
                 <CheckCircleIcon />
@@ -453,7 +453,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Portfolio Section (8-Card Numbered Grid) */}
+      {/* Product Portfolio Section (10-Card Numbered Grid) */}
       <section id="products" className="bg-cream py-28 md:py-36 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           
@@ -467,13 +467,25 @@ export default function Home() {
           </div>
 
           {/* Numbered Grid (Gap-px style border) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-emerald/10 border border-emerald/10 reveal shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-emerald/10 border border-emerald/10 reveal shadow-xl">
             {productsList.map((product, idx) => (
               <div 
                 key={idx}
-                className="bg-cream p-8 hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,26,18,0.06)] transition-all duration-300 group flex flex-col justify-between min-h-[300px]"
+                className="bg-cream p-8 hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,26,18,0.06)] transition-all duration-300 group flex flex-col justify-between min-h-[320px] relative overflow-hidden"
               >
-                <div>
+                {/* Background Image Container */}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                  <Image 
+                    src={product.bgImage} 
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover opacity-5 group-hover:opacity-15 transition-all duration-700 scale-100 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-cream/20 via-transparent to-transparent z-10" />
+                </div>
+
+                <div className="relative z-10">
                   {/* Top card metadata */}
                   <div className="flex justify-between items-baseline mb-4">
                     <span className="font-playfair text-[44px] font-bold text-ink/10 group-hover:text-gold/20 transition-colors duration-300 leading-none">
@@ -496,11 +508,11 @@ export default function Home() {
                 </div>
 
                 {/* Tag list */}
-                <div className="flex flex-wrap gap-1 mt-6">
+                <div className="flex flex-wrap gap-1 mt-6 relative z-10">
                   {product.tags.map((tag, tagIdx) => (
                     <span 
                       key={tagIdx} 
-                      className="text-[9px] tracking-[0.1em] uppercase bg-emerald/[0.04] text-emerald-mid/60 px-2 py-0.5 font-medium border border-emerald/[0.03]"
+                      className="text-[9px] tracking-[0.1em] uppercase bg-emerald/[0.06] text-emerald px-2 py-1 font-semibold border border-emerald/10 transition-all duration-300 group-hover:bg-emerald group-hover:text-gold group-hover:border-gold/25"
                     >
                       {tag}
                     </span>
@@ -520,15 +532,17 @@ export default function Home() {
       <section id="certifications" className="bg-cream py-16 border-b border-emerald/10">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-px bg-emerald/10 border border-emerald/10 shadow-sm reveal">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-px bg-emerald/10 border border-emerald/10 shadow-sm reveal">
             {[
               "WHO-GMP",
-              "ISO 9001:2015",
-              "ISO 13485",
-              "CE MARK",
-              "AYUSH",
-              "HALAL",
-              "FDA READY"
+              "EU-GMP",
+              "ISO 9001 & 13485",
+              "AYUSH CERTIFIED",
+              "DRUG LICENCE",
+              "FSSAI LICENCE",
+              "CE CERTIFIED",
+              "HALAL & KOSHER",
+              "US FDA CTD"
             ].map((cert, idx) => (
               <div 
                 key={idx}
@@ -617,7 +631,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
             
             {/* Card 1 */}
             <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300">
@@ -649,6 +663,17 @@ export default function Home() {
               <h3 className="text-[18px] font-semibold text-white tracking-wide mb-3">Velocity & Transparency</h3>
               <p className="text-cream/60 text-[14px] leading-relaxed">
                 Get pricing quotations within 48 business hours. Track regulatory dossier status and shipping configurations transparently via a dedicated international trade manager.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300">
+              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
+                <Clock size={20} />
+              </div>
+              <h3 className="text-[18px] font-semibold text-white tracking-wide mb-3">On-Time Delivery</h3>
+              <p className="text-cream/60 text-[14px] leading-relaxed">
+                Streamlined global logistics with temperature-tracked cold chain support and direct customs clearance to guarantee prompt, uninterrupted B2B supply lines.
               </p>
             </div>
 
@@ -981,58 +1006,92 @@ const productsList = [
   {
     num: "01",
     category: "Rx / OTC",
-    title: "Pharmaceutical Generics",
-    desc: "Sourcing generic medicines across all therapeutic categories from WHO-GMP certified facilities with CTD dossiers on request.",
-    tags: ["Tablets", "Injectables", "Syrups", "Topicals"]
+    title: "Pharmaceutical Generics (Rx)",
+    desc: "Sourcing prescription generic medicines across all major therapeutic categories (HIV/AIDS therapeutics, oncology, cardiovascular, CNS) from WHO-GMP certified facilities.",
+    tags: ["Tablets", "Capsules", "HIV/AIDS Care", "Dossiers"],
+    bgImage: "/images/prod_generics_rx.png"
   },
   {
     num: "02",
-    category: "Class II & III",
-    title: "Medical Devices",
-    desc: "CE, ISO 13485, and FDA-compliant diagnostic and therapeutic devices for hospital and retail procurement.",
-    tags: ["Diagnostics", "Surgical", "Monitoring", "Rehab"]
+    category: "Rx / OTC",
+    title: "Pharmaceutical Generics (OTC)",
+    desc: "Exporting therapeutic solutions including oncology treatments, diabetes care, HIV/AIDS, tuberculosis (TB), critical care medicines, cardiovascular care, injectables, vaccines, and daily nutraceuticals.",
+    tags: [
+      "Oncology",
+      "Diabetes Care",
+      "HIV/AIDS",
+      "Tuberculosis (TB)",
+      "Critical Care",
+      "Cardiovascular",
+      "Injectables",
+      "Vaccines",
+      "Nutraceuticals"
+    ],
+    bgImage: "/images/prod_generics_otc.png"
   },
   {
     num: "03",
-    category: "Niche Rx",
-    title: "Specialty Therapeutics",
-    desc: "Oncology support drugs, diabetic care range, and paediatric formulations with private label and white-label options.",
-    tags: ["Oncology", "Diabetes", "Paediatrics"]
+    category: "Standardized",
+    title: "Nutraceuticals",
+    desc: "Premium daily health supplements, vitamins, multi-minerals, and organic nutrient formulations for international health markets.",
+    tags: ["Vitamins", "Minerals", "Daily Care"],
+    bgImage: "/images/prod_nutraceuticals.png"
   },
   {
     num: "04",
-    category: "AYUSH Certified",
-    title: "Ayurvedic Medicines",
-    desc: "Classical Ayurvedic formulations from AYUSH-licensed GMP manufacturers. Full batch documentation available.",
-    tags: ["Asavas", "Churnas", "Vatis", "Taila"]
+    category: "Specialty Rx",
+    title: "Injectable Vaccines",
+    desc: "Critical care injectables, vials, pre-filled syringes, and high-safety vaccines processed under strict aseptic cleanroom environments.",
+    tags: ["Injectables", "Vaccines", "Critical Care"],
+    bgImage: "/images/prod_injectables.png"
   },
   {
     num: "05",
-    category: "Standardized",
-    title: "Herbal Nutraceuticals",
-    desc: "Standardized herbal actives in capsule, softgel, and powder formats. Phytochemical COA with every shipment.",
-    tags: ["Ashwagandha", "Turmeric", "Moringa", "Triphala"]
+    category: "DMF Filed",
+    title: "APIs",
+    desc: "Active Pharmaceutical Ingredients, bulk drug actives, and regulatory intermediates sourced from US FDA-inspected manufacturing plants.",
+    tags: ["Active Ingredients", "DMF Files", "RSM"],
+    bgImage: "/images/prod_apis.png"
   },
   {
     num: "06",
-    category: "Halal / Vegan",
-    title: "Cosmeceuticals",
-    desc: "Premium personal care products. Halal-certified and vegan options available for Middle East and EU markets.",
-    tags: ["Skincare", "Hair", "Wellness"]
+    category: "Class II & III",
+    title: "Medical Devices",
+    desc: "CE, ISO 13485, and FDA-ready surgical instruments, diagnostic equipment, healthcare disposables, and clinical hardware.",
+    tags: ["Diagnostics", "Surgical", "Disposables"],
+    bgImage: "/images/prod_devices.png"
   },
   {
     num: "07",
-    category: "API Intermediates",
-    title: "Bulk Drugs & RSM",
-    desc: "High-purity bulk actives, intermediates, and raw starting materials from US FDA-inspected facilities.",
-    tags: ["COA", "COO", "DMF Support"]
+    category: "AYUSH Certified",
+    title: "Ayurvedic Medicines",
+    desc: "Classical Ayurvedic formulations, natural wellness vatis, churnas, and tailas sourced from licensed AYUSH GMP manufacturers.",
+    tags: ["Vatis", "Churnas", "Asavas", "Tailas"],
+    bgImage: "/images/prod_ayurvedic.png"
   },
   {
     num: "08",
-    category: "DMF Filed",
-    title: "Active Ingredients",
-    desc: "DMF-filed APIs with full regulatory packages. Anti-diabetic, hormonal, and CNS categories in stock.",
-    tags: ["Anti-Infectives", "CVS", "CNS", "Oncology"]
+    category: "Standardized",
+    title: "Herbal Nutraceuticals",
+    desc: "Standardized organic botanical extracts, phytochemical actives, and custom herbal capsule ingredients with complete batch COAs.",
+    tags: ["Ashwagandha", "Turmeric", "Moringa"],
+    bgImage: "/images/prod_herbal.png"
+  },
+  {
+    num: "09",
+    category: "Halal / Vegan",
+    title: "Cosmeceuticals",
+    desc: "Dermatologist-recommended skincare, clinical haircare, and personal wellness cosmetics available with Halal or Vegan certifications.",
+    tags: ["Skincare", "Haircare", "Medicated"],
+    bgImage: "/images/prod_cosmeceuticals.png"
+  },
+  {
+    num: "10",
+    category: "Bulk Actives",
+    title: "Bulk Drugs",
+    desc: "Exporting raw materials, bulk drug formulations, and high-purity chemical substances to global pharmaceutical manufacturers.",
+    tags: ["Bulk Actives", "Intermediates", "Raw Materials"],
+    bgImage: "/images/prod_bulk_drugs.png"
   }
 ];
 
