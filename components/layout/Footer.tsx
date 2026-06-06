@@ -30,7 +30,7 @@ export default function Footer() {
               <img 
                 src="/images/Logo.png" 
                 alt="Neo Ayushveda Logo" 
-                className="h-10 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
             </div>
             <p className="font-playfair italic text-cream/50 text-[18px] leading-relaxed">

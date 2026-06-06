@@ -122,7 +122,7 @@ export default function HoverFooter() {
               <img 
                 src="/images/Logo.png" 
                 alt="Neo Ayushveda Logo" 
-                className="h-10 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
             </div>
             <p className="text-sm text-cream/60 leading-relaxed font-jakarta">
