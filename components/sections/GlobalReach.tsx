@@ -50,7 +50,7 @@ export default function GlobalReach() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-20 reveal active">
+        <div className="max-w-3xl mb-20 reveal">
           <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
             GLOBAL REACH & LOGISTICS
           </span>
@@ -141,7 +141,7 @@ export default function GlobalReach() {
 
         {/* Geographic Coverage Columns */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 pt-6 border-t border-white/10">
-          <div>
+          <div className="reveal delay-100">
             <h4 className="text-[10px] tracking-[0.15em] uppercase text-gold/80 mb-3 font-semibold">Africa</h4>
             <ul className="text-[13px] text-cream/50 leading-relaxed space-y-1.5 font-jakarta">
               <li>Kenya</li>
@@ -152,7 +152,7 @@ export default function GlobalReach() {
             </ul>
           </div>
           
-          <div>
+          <div className="reveal delay-200">
             <h4 className="text-[10px] tracking-[0.15em] uppercase text-gold/80 mb-3 font-semibold">Asia Pacific</h4>
             <ul className="text-[13px] text-cream/50 leading-relaxed space-y-1.5 font-jakarta">
               <li>Philippines</li>
@@ -163,7 +163,7 @@ export default function GlobalReach() {
             </ul>
           </div>
 
-          <div>
+          <div className="reveal delay-300">
             <h4 className="text-[10px] tracking-[0.15em] uppercase text-gold/80 mb-3 font-semibold">Americas</h4>
             <ul className="text-[13px] text-cream/50 leading-relaxed space-y-1.5 font-jakarta">
               <li>United States</li>
@@ -174,7 +174,7 @@ export default function GlobalReach() {
             </ul>
           </div>
 
-          <div>
+          <div className="reveal delay-400">
             <h4 className="text-[10px] tracking-[0.15em] uppercase text-gold/80 mb-3 font-semibold">Europe</h4>
             <ul className="text-[13px] text-cream/50 leading-relaxed space-y-1.5 font-jakarta">
               <li>Germany</li>
@@ -185,7 +185,7 @@ export default function GlobalReach() {
             </ul>
           </div>
 
-          <div>
+          <div className="reveal delay-500">
             <h4 className="text-[10px] tracking-[0.15em] uppercase text-gold/80 mb-3 font-semibold">Middle East</h4>
             <ul className="text-[13px] text-cream/50 leading-relaxed space-y-1.5 font-jakarta">
               <li>U.A.E</li>
@@ -196,7 +196,7 @@ export default function GlobalReach() {
             </ul>
           </div>
 
-          <div>
+          <div className="reveal delay-600">
             <h4 className="text-[10px] tracking-[0.15em] uppercase text-gold/80 mb-3 font-semibold">Central Asia</h4>
             <ul className="text-[13px] text-cream/50 leading-relaxed space-y-1.5 font-jakarta">
               <li>Kazakhstan</li>

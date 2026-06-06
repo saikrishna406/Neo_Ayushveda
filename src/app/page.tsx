@@ -53,7 +53,7 @@ export default function Home() {
       { threshold: 0.15 }
     );
 
-    const elements = document.querySelectorAll(".reveal, .reveal-left");
+    const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -141,7 +141,7 @@ export default function Home() {
           
           <div className="relative z-10">
             {/* Eyebrow */}
-            <div className="mb-6 flex items-center">
+            <div className="mb-6 flex items-center opacity-0 animate-fade-in-up">
               <span className="inline-block w-6 h-px bg-gold mr-3" />
               <span className="text-gold text-[10px] tracking-[0.22em] uppercase font-semibold">
                 INTERNATIONAL PHARMACEUTICAL TRADERS & EXPORTERS
@@ -149,18 +149,18 @@ export default function Home() {
             </div>
 
             {/* H1 Heading */}
-            <h1 className="font-playfair text-[48px] md:text-[64px] font-bold leading-[1.05] tracking-[-0.02em] text-white">
+            <h1 className="font-playfair text-[48px] md:text-[64px] font-bold leading-[1.05] tracking-[-0.02em] text-white opacity-0 animate-fade-in-up animation-delay-100">
               Precision Pharma <br />
               <span className="text-gold font-normal italic">From India To The World.</span>
             </h1>
 
             {/* Body Description */}
-            <p className="text-cream/65 text-[17px] leading-relaxed mt-6 mb-10 max-w-lg">
+            <p className="text-cream/65 text-[17px] leading-relaxed mt-6 mb-10 max-w-lg opacity-0 animate-fade-in-up animation-delay-200">
               Neo Ayushveda Pvt Ltd is a specialist pharmaceutical trader and exporter, sourcing WHO-GMP certified generics, medical devices and herbal formulations from India's finest certified manufacturers — delivering them to regulated healthcare markets across every continent.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animation-delay-300">
               <button 
                 onClick={() => scrollTo("contact")}
                 className="bg-gold text-emerald px-7 py-4 text-[12px] tracking-[0.15em] uppercase font-semibold hover:bg-gold-light transition-colors duration-200 shadow-[0_4px_20px_rgba(201,150,59,0.15)]"
@@ -176,7 +176,7 @@ export default function Home() {
             </div>
 
             {/* Trust Stats Row */}
-            <div className="mt-16 border-t border-cream/10 pt-10 grid grid-cols-3 gap-6">
+            <div className="mt-16 border-t border-cream/10 pt-10 grid grid-cols-3 gap-6 opacity-0 animate-fade-in-up animation-delay-400">
               <div>
                 <div className="text-[22px] font-semibold text-cream">50+</div>
                 <div className="text-[11px] tracking-[0.1em] uppercase text-cream/40 mt-1">Export Markets</div>
@@ -198,7 +198,7 @@ export default function Home() {
         <div className="bg-cream grid-texture flex items-center justify-center py-20 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-emerald/5 min-h-[600px] px-6 lg:px-12">
           
           {/* Layered Image Frame */}
-          <div className="relative w-full max-w-[420px] aspect-[4/5] shadow-[0_30px_100px_rgba(10,26,18,0.12)] group">
+          <div className="relative w-full max-w-[420px] aspect-[4/5] shadow-[0_30px_100px_rgba(10,26,18,0.12)] group opacity-0 animate-fade-in-right animation-delay-200">
             
             {/* Decorative background gold frame offset */}
             <div className="absolute inset-0 border border-gold/40 translate-x-4 translate-y-4 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
@@ -222,13 +222,15 @@ export default function Home() {
             </div>
 
             {/* Overlaid floating glass brand badge */}
-            <div className="absolute -left-6 bottom-12 bg-white/80 backdrop-blur-md border border-emerald/10 p-5 shadow-[0_15px_40px_rgba(10,26,18,0.08)] max-w-[180px] hidden sm:block">
-              <div className="w-8 h-8 rounded-full border border-gold/60 flex items-center justify-center mb-2.5">
-                <span className="text-gold text-[10px] font-semibold tracking-wider font-playfair italic">N</span>
+            <div className="absolute -left-6 bottom-12 hidden sm:block opacity-0 animate-fade-in-left animation-delay-400">
+              <div className="animate-float bg-white/80 backdrop-blur-md border border-emerald/10 p-5 shadow-[0_15px_40px_rgba(10,26,18,0.08)] max-w-[180px]">
+                <div className="w-8 h-8 rounded-full border border-gold/60 flex items-center justify-center mb-2.5">
+                  <span className="text-gold text-[10px] font-semibold tracking-wider font-playfair italic">N</span>
+                </div>
+                <p className="text-[8px] tracking-[0.2em] uppercase text-ink-soft mb-0.5 font-jakarta">ESTABLISHED</p>
+                <h4 className="text-[12px] font-bold text-ink tracking-wide uppercase leading-none mb-1 font-jakarta">HYDERABAD</h4>
+                <p className="text-[9px] text-ink-soft leading-normal font-jakarta">Global Sourcing Hub</p>
               </div>
-              <p className="text-[8px] tracking-[0.2em] uppercase text-ink-soft mb-0.5 font-jakarta">ESTABLISHED</p>
-              <h4 className="text-[12px] font-bold text-ink tracking-wide uppercase leading-none mb-1 font-jakarta">HYDERABAD</h4>
-              <p className="text-[9px] text-ink-soft leading-normal font-jakarta">Global Sourcing Hub</p>
             </div>
 
             {/* Animated decorative ring behind the top right of the card */}
@@ -319,7 +321,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             
             {/* Card 1 */}
-            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1">
+            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 reveal delay-100">
               <div className="w-12 h-12 rounded-full bg-emerald/5 flex items-center justify-center mb-6 group-hover:bg-gold-pale transition-colors duration-300 text-gold">
                 <Pill size={24} />
               </div>
@@ -330,7 +332,7 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1">
+            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 reveal delay-200">
               <div className="w-12 h-12 rounded-full bg-emerald/5 flex items-center justify-center mb-6 group-hover:bg-gold-pale transition-colors duration-300 text-gold">
                 <Stethoscope size={24} />
               </div>
@@ -341,7 +343,7 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1">
+            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 reveal delay-300">
               <div className="w-12 h-12 rounded-full bg-emerald/5 flex items-center justify-center mb-6 group-hover:bg-gold-pale transition-colors duration-300 text-gold">
                 <Leaf size={24} />
               </div>
@@ -352,7 +354,7 @@ export default function Home() {
             </div>
 
             {/* Card 4 */}
-            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1">
+            <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 reveal delay-400">
               <div className="w-12 h-12 rounded-full bg-emerald/5 flex items-center justify-center mb-6 group-hover:bg-gold-pale transition-colors duration-300 text-gold">
                 <Globe size={24} />
               </div>
@@ -467,11 +469,12 @@ export default function Home() {
           </div>
 
           {/* Numbered Grid (Gap-px style border) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-emerald/10 border border-emerald/10 reveal shadow-xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-emerald/10 border border-emerald/10 shadow-xl">
             {productsList.map((product, idx) => (
               <div 
                 key={idx}
-                className="bg-cream p-8 hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,26,18,0.06)] transition-all duration-300 group flex flex-col justify-between min-h-[320px] relative overflow-hidden"
+                className="bg-cream p-8 hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,26,18,0.06)] transition-all duration-300 group flex flex-col justify-between min-h-[320px] relative overflow-hidden reveal"
+                style={{ transitionDelay: `${(idx % 5) * 100}ms` }}
               >
                 {/* Background Image Container */}
                 <div className="absolute inset-0 z-0 pointer-events-none">

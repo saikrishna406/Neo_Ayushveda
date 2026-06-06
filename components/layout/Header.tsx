@@ -73,7 +73,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 flex items-center ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 flex items-center opacity-0 animate-slide-down ${
           scrolled
             ? "bg-emerald/85 backdrop-blur-[20px] border-b border-white/10 shadow-[0_10px_30px_rgba(10,26,18,0.15)]"
             : "bg-transparent border-b border-transparent"
