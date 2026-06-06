@@ -3,19 +3,19 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { 
-  Sparkles, 
-  Pill, 
-  Stethoscope, 
-  Leaf, 
-  Globe, 
-  ShieldCheck, 
-  Scale, 
-  Zap, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import {
+  Sparkles,
+  Pill,
+  Stethoscope,
+  Leaf,
+  Globe,
+  ShieldCheck,
+  Scale,
+  Zap,
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   MessageCircle,
   ArrowRight,
   ChevronRight,
@@ -71,7 +71,7 @@ export default function Home() {
     category: "Pharmaceutical Generics",
     message: ""
   });
-  
+
   // Chip Select State
   const [selectedDocs, setSelectedDocs] = useState<string[]>([]);
   const docOptions = [
@@ -133,12 +133,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-20">
-        
+
         {/* Left Panel */}
         <div className="bg-emerald text-cream flex flex-col justify-center px-6 md:px-12 lg:px-20 py-24 relative overflow-hidden">
           {/* Subtle background glow */}
           <div className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full bg-gold/5 blur-[120px] pointer-events-none" />
-          
+
           <div className="relative z-10">
             {/* Eyebrow */}
             <div className="mb-6 flex items-center opacity-0 animate-fade-in-up">
@@ -161,13 +161,13 @@ export default function Home() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animation-delay-300">
-              <button 
+              <button
                 onClick={() => scrollTo("contact")}
                 className="bg-gold text-emerald px-7 py-4 text-[12px] tracking-[0.15em] uppercase font-semibold hover:bg-gold-light transition-colors duration-200 shadow-[0_4px_20px_rgba(201,150,59,0.15)]"
               >
                 Start Sourcing Enquiry
               </button>
-              <button 
+              <button
                 onClick={() => scrollTo("products")}
                 className="border border-cream/30 text-cream px-7 py-4 text-[12px] tracking-[0.15em] uppercase hover:border-cream/60 hover:bg-white/5 transition-all duration-200"
               >
@@ -196,26 +196,26 @@ export default function Home() {
 
         {/* Right Panel */}
         <div className="bg-cream grid-texture flex items-center justify-center py-20 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-emerald/5 min-h-[600px] px-6 lg:px-12">
-          
+
           {/* Layered Image Frame */}
           <div className="relative w-full max-w-[420px] aspect-[4/5] shadow-[0_30px_100px_rgba(10,26,18,0.12)] group opacity-0 animate-fade-in-right animation-delay-200">
-            
+
             {/* Decorative background gold frame offset */}
             <div className="absolute inset-0 border border-gold/40 translate-x-4 translate-y-4 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
-            
+
             {/* Outer border of main image container */}
             <div className="absolute inset-0 bg-white p-3 border border-emerald/5">
               <div className="relative w-full h-full overflow-hidden bg-[#0A1A12]">
                 {/* Main Image */}
-                <Image 
-                  src="/images/hero_pharma_botanical.png" 
+                <Image
+                  src="/images/hero_pharma_botanical.png"
                   alt="Neo Ayushveda Premium Pharmaceutical Sourcing"
                   fill
                   sizes="(max-width: 768px) 100vw, 420px"
                   className="object-cover transition-transform duration-[1000ms] group-hover:scale-105"
                   priority
                 />
-                
+
                 {/* Subtle dark green vignette overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald/40 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -245,27 +245,27 @@ export default function Home() {
         <div className="animate-marquee select-none flex items-center">
           {[...Array(3)].map((_, i) => (
             <span key={i} className="text-[10px] tracking-[0.2em] uppercase text-gold/60 font-semibold flex items-center">
-              PHARMACEUTICAL GENERICS  
-              <span className="mx-4 text-gold/30">◆</span>  
-              MEDICAL DEVICES  
-              <span className="mx-4 text-gold/30">◆</span>  
-              WHO-GMP CERTIFIED  
-              <span className="mx-4 text-gold/30">◆</span>  
-              CE COMPLIANT  
-              <span className="mx-4 text-gold/30">◆</span>  
-              AYURVEDIC MEDICINES  
-              <span className="mx-4 text-gold/30">◆</span>  
-              HERBAL NUTRACEUTICALS  
-              <span className="mx-4 text-gold/30">◆</span>  
-              COSMECEUTICALS  
-              <span className="mx-4 text-gold/30">◆</span>  
-              GLOBAL EXPORTS  
-              <span className="mx-4 text-gold/30">◆</span>  
-              PRIVATE LABEL  
-              <span className="mx-4 text-gold/30">◆</span>  
-              CONTRACT SOURCING  
-              <span className="mx-4 text-gold/30">◆</span>  
-              US FDA DOSSIER SUPPORT  
+              PHARMACEUTICAL GENERICS
+              <span className="mx-4 text-gold/30">◆</span>
+              MEDICAL DEVICES
+              <span className="mx-4 text-gold/30">◆</span>
+              WHO-GMP CERTIFIED
+              <span className="mx-4 text-gold/30">◆</span>
+              CE COMPLIANT
+              <span className="mx-4 text-gold/30">◆</span>
+              AYURVEDIC MEDICINES
+              <span className="mx-4 text-gold/30">◆</span>
+              HERBAL NUTRACEUTICALS
+              <span className="mx-4 text-gold/30">◆</span>
+              COSMECEUTICALS
+              <span className="mx-4 text-gold/30">◆</span>
+              GLOBAL EXPORTS
+              <span className="mx-4 text-gold/30">◆</span>
+              PRIVATE LABEL
+              <span className="mx-4 text-gold/30">◆</span>
+              CONTRACT SOURCING
+              <span className="mx-4 text-gold/30">◆</span>
+              US FDA DOSSIER SUPPORT
               <span className="mx-4 text-gold/30">◆</span>
             </span>
           ))}
@@ -275,7 +275,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-cream py-28 md:py-36 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          
+
           {/* Left Column: Context */}
           <div className="reveal">
             <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
@@ -300,7 +300,7 @@ export default function Home() {
 
           {/* Right Column: Capabilities Card Matrix */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
+
             {/* Card 1 */}
             <div className="border border-emerald/10 bg-white/40 backdrop-blur-xs p-8 hover:border-gold/30 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1 reveal delay-100">
               <div className="w-12 h-12 rounded-full bg-emerald/5 flex items-center justify-center mb-6 group-hover:bg-gold-pale transition-colors duration-300 text-gold">
@@ -353,9 +353,9 @@ export default function Home() {
       <section id="leadership" className="bg-[#0A1A12] py-28 md:py-36 text-cream relative overflow-hidden">
         {/* Subtle decorative background vector */}
         <div className="absolute right-[-10%] top-[-10%] w-[50%] h-[50%] rounded-full bg-gold/5 blur-[100px] pointer-events-none" />
-        
+
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <div className="reveal">
             <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
               EXECUTIVE LEADERSHIP
@@ -366,23 +366,23 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            
+
             {/* Avatar Frame (col-span-4) */}
             <div className="lg:col-span-4 reveal-left">
               <div className="aspect-[3/4] bg-[#122A1C] border border-white/10 relative overflow-hidden flex items-center justify-center shadow-2xl">
                 {/* Visual texture lines */}
                 <div className="absolute inset-0 bg-radial-gradient opacity-10" />
-                
+
                 {/* Main Image */}
-                <Image 
-                  src="/images/Founder.jpeg" 
-                  alt="Anil Kumar Eravathri - Managing Director" 
+                <Image
+                  src="/images/Founder.jpeg"
+                  alt="Anil Kumar Eravathri - Managing Director"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover object-top"
                   priority
                 />
-                
+
                 {/* Director Badge */}
                 <div className="absolute top-4 left-4 bg-gold text-emerald text-[9px] font-semibold tracking-[0.2em] uppercase px-3.5 py-1.5 shadow-md z-10">
                   Managing Director
@@ -398,7 +398,7 @@ export default function Home() {
               <p className="text-[14px] font-medium text-gold/70 mt-2 font-jakarta tracking-wider uppercase">
                 Founder & Managing Director, Neo Ayushveda Pvt Ltd
               </p>
-              
+
               <div className="w-12 h-px bg-gold/40 my-6" />
 
               <div className="space-y-6 text-cream/70 text-[16px] leading-relaxed max-w-2xl font-jakarta">
@@ -421,7 +421,7 @@ export default function Home() {
                   "CHAIRMAN, TGMDC",
                   "HEALTHCARE ENTREPRENEUR"
                 ].map((pill, idx) => (
-                  <span 
+                  <span
                     key={idx}
                     className="border border-white/15 text-cream/60 text-[10px] tracking-[0.15em] uppercase px-4 py-1.5 font-semibold bg-white/[0.02] hover:border-gold/30 hover:text-gold transition-colors duration-300"
                   >
@@ -439,7 +439,7 @@ export default function Home() {
       {/* Product Portfolio Section (10-Card Numbered Grid) */}
       <section id="products" className="bg-cream py-28 md:py-36 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <div className="mb-20 reveal">
             <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
               PRODUCT PORTFOLIO
@@ -452,15 +452,15 @@ export default function Home() {
           {/* Numbered Grid (Gap-px style border) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-emerald/10 border border-emerald/10 shadow-xl">
             {productsList.map((product, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-cream p-8 hover:bg-white hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(10,26,18,0.06)] transition-all duration-300 group flex flex-col justify-between min-h-[320px] relative overflow-hidden reveal"
                 style={{ transitionDelay: `${(idx % 5) * 100}ms` }}
               >
                 {/* Background Image Container */}
                 <div className="absolute inset-0 z-0 pointer-events-none">
-                  <Image 
-                    src={product.bgImage} 
+                  <Image
+                    src={product.bgImage}
                     alt=""
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -479,12 +479,12 @@ export default function Home() {
                       {product.category}
                     </span>
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-[17px] font-semibold text-ink mb-3 group-hover:text-emerald transition-colors duration-300">
                     {product.title}
                   </h3>
-                  
+
                   {/* Desc */}
                   <p className="text-[14px] text-ink-soft leading-relaxed">
                     {product.desc}
@@ -494,8 +494,8 @@ export default function Home() {
                 {/* Tag list */}
                 <div className="flex flex-wrap gap-1 mt-6 relative z-10">
                   {product.tags.map((tag, tagIdx) => (
-                    <span 
-                      key={tagIdx} 
+                    <span
+                      key={tagIdx}
                       className="text-[9px] tracking-[0.1em] uppercase bg-emerald/[0.06] text-emerald px-2 py-1 font-semibold border border-emerald/10 transition-all duration-300 group-hover:bg-emerald group-hover:text-gold group-hover:border-gold/25"
                     >
                       {tag}
@@ -515,7 +515,7 @@ export default function Home() {
       {/* Certification Badges Section */}
       <section id="certifications" className="bg-cream py-16 border-b border-emerald/10">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-9 gap-px bg-emerald/10 border border-emerald/10 shadow-sm">
             {[
               "WHO-GMP",
@@ -523,12 +523,12 @@ export default function Home() {
               "ISO 9001 & 13485",
               "AYUSH CERTIFIED",
               "DRUG LICENCE",
-              "FSSAI LICENCE",
+              "FOOD LICENCE",
               "CE CERTIFIED",
               "HALAL & KOSHER",
               "US FDA CTD"
             ].map((cert, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-cream px-6 py-10 text-center flex flex-col items-center justify-center hover:bg-gold-pale transition-colors duration-300 reveal"
                 style={{ transitionDelay: `${(idx % 9) * 80}ms` }}
@@ -547,7 +547,7 @@ export default function Home() {
       {/* Sourcing Process Workflow */}
       <section className="bg-[#FAF7F2] py-28 md:py-36 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <div className="mb-20 text-center max-w-2xl mx-auto reveal">
             <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
               HOW WE WORK
@@ -564,12 +564,12 @@ export default function Home() {
           <div className="relative mt-16">
             {/* Connecting line on desktop */}
             <div className="hidden lg:block absolute top-6 left-12 right-12 h-px bg-emerald/10 z-0" />
-            
+
             {/* Step list */}
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
               {workflowSteps.map((step, idx) => (
                 <div key={idx} className="flex flex-col items-center lg:items-start text-center lg:text-left group relative reveal" style={{ transitionDelay: `${idx * 150}ms` }}>
-                  
+
                   {/* Circle Step */}
                   <div className="w-12 h-12 rounded-full border border-emerald/10 bg-white flex items-center justify-center shadow-md group-hover:border-gold group-hover:bg-gold-pale transition-all duration-300">
                     <span className="font-playfair text-gold font-bold text-lg italic">
@@ -606,7 +606,7 @@ export default function Home() {
       {/* Why Us Section */}
       <section id="whyus" className="bg-[#0A1A12] py-28 md:py-36 text-cream relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <div className="mb-20 text-center max-w-2xl mx-auto reveal">
             <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
               OUR DIFFERENTIATORS
@@ -617,7 +617,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
+
             {/* Card 1 */}
             <div className="border border-white/10 p-8 hover:border-gold/30 hover:bg-white/[0.02] transition-colors duration-300 reveal delay-100">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold mb-6">
@@ -670,7 +670,7 @@ export default function Home() {
       {/* B2B Lead Capture & Contact Section */}
       <section id="contact" className="bg-cream py-28 md:py-36 relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-6 md:px-12">
-          
+
           <div className="mb-16 reveal">
             <span className="text-gold text-[11px] font-medium tracking-[0.22em] uppercase block mb-3">
               ACQUISITIONS & LOGISTICS
@@ -681,14 +681,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
-            
+
             {/* Left Panel - Corporate Info (col-span-2) */}
             <div className="lg:col-span-2 reveal-left">
               <div className="bg-emerald text-cream p-8 md:p-10 shadow-2xl relative overflow-hidden space-y-8 border border-white/5">
-                
+
                 {/* Contact Items */}
                 <div className="space-y-6">
-                  
+
                   <div className="flex gap-4 items-start">
                     <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gold shrink-0 mt-1">
                       <Mail size={16} />
@@ -767,7 +767,7 @@ export default function Home() {
                       "Import Permits",
                       "DMF Files"
                     ].map((doc, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="border border-white/15 bg-white/[0.02] text-cream/50 text-[10px] tracking-wide uppercase px-3 py-1 font-semibold"
                       >
@@ -783,7 +783,7 @@ export default function Home() {
             {/* Right Panel - Enquiry Form (col-span-3) */}
             <div className="lg:col-span-3 reveal-right">
               <div className="bg-white border border-emerald/10 p-8 md:p-10 shadow-2xl relative">
-                
+
                 {formSubmitted && (
                   <div className="bg-emerald/5 border border-gold/30 text-emerald p-6 mb-8 flex items-start gap-3 animate-fade-in">
                     <ShieldCheck size={20} className="text-gold shrink-0 mt-0.5" />
@@ -797,7 +797,7 @@ export default function Home() {
                 )}
 
                 <form onSubmit={handleFormSubmit} className="space-y-6">
-                  
+
                   {/* Row 1 - Names */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col">
@@ -812,7 +812,7 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                       />
                     </div>
-                    
+
                     <div className="flex flex-col">
                       <label htmlFor="lastName" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Last Name</label>
                       <input
@@ -841,7 +841,7 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
                     </div>
-                    
+
                     <div className="flex flex-col">
                       <label htmlFor="phone" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Phone / WhatsApp</label>
                       <input
@@ -881,9 +881,9 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                       >
                         {[
-                          "UAE", "Saudi Arabia", "Kenya", "Nigeria", "Egypt", 
-                          "Philippines", "Indonesia", "Vietnam", "Germany", 
-                          "UK", "USA", "Brazil", "Kazakhstan", "Uzbekistan", 
+                          "UAE", "Saudi Arabia", "Kenya", "Nigeria", "Egypt",
+                          "Philippines", "Indonesia", "Vietnam", "Germany",
+                          "UK", "USA", "Brazil", "Kazakhstan", "Uzbekistan",
                           "Sri Lanka", "Qatar", "South Africa", "Other"
                         ].map((c, i) => (
                           <option key={i} value={c} className="text-ink bg-cream">{c}</option>
@@ -900,8 +900,8 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                       >
                         {[
-                          "Pharmaceutical Generics", "Medical Devices", "Ayurvedic Medicines", 
-                          "Herbal Nutraceuticals", "Cosmeceuticals", "Bulk Drugs / RSM", 
+                          "Pharmaceutical Generics", "Medical Devices", "Ayurvedic Medicines",
+                          "Herbal Nutraceuticals", "Cosmeceuticals", "Bulk Drugs / RSM",
                           "APIs", "Specialty Therapeutics", "Multiple Categories"
                         ].map((cat, i) => (
                           <option key={i} value={cat} className="text-ink bg-cream">{cat}</option>
@@ -923,11 +923,10 @@ export default function Home() {
                             key={idx}
                             type="button"
                             onClick={() => handleDocToggle(doc)}
-                            className={`px-3 py-1.5 text-[10px] tracking-wide uppercase font-semibold transition-all duration-200 border ${
-                              isSelected 
-                                ? "bg-emerald text-cream border-emerald" 
+                            className={`px-3 py-1.5 text-[10px] tracking-wide uppercase font-semibold transition-all duration-200 border ${isSelected
+                                ? "bg-emerald text-cream border-emerald"
                                 : "border-ink/15 text-ink/50 hover:border-gold hover:text-gold"
-                            }`}
+                              }`}
                           >
                             {doc}
                           </button>
