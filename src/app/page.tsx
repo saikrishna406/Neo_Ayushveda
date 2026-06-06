@@ -76,23 +76,23 @@ export default function Home() {
   });
 
   const countryCodes = [
-    { code: "+91", label: "IN" },
     { code: "+971", label: "AE" },
-    { code: "+1", label: "US" },
-    { code: "+44", label: "GB" },
-    { code: "+966", label: "SA" },
-    { code: "+974", label: "QA" },
-    { code: "+63", label: "PH" },
-    { code: "+62", label: "ID" },
-    { code: "+84", label: "VN" },
-    { code: "+254", label: "KE" },
-    { code: "+234", label: "NG" },
-    { code: "+20", label: "EG" },
-    { code: "+49", label: "DE" },
     { code: "+55", label: "BR" },
+    { code: "+49", label: "DE" },
+    { code: "+20", label: "EG" },
+    { code: "+44", label: "GB" },
+    { code: "+62", label: "ID" },
+    { code: "+91", label: "IN" },
+    { code: "+254", label: "KE" },
     { code: "+7", label: "KZ" },
-    { code: "+998", label: "UZ" },
     { code: "+94", label: "LK" },
+    { code: "+234", label: "NG" },
+    { code: "+63", label: "PH" },
+    { code: "+974", label: "QA" },
+    { code: "+966", label: "SA" },
+    { code: "+1", label: "US" },
+    { code: "+998", label: "UZ" },
+    { code: "+84", label: "VN" },
     { code: "+27", label: "ZA" },
   ];
 
@@ -865,26 +865,26 @@ export default function Home() {
                   {/* Row 1 - Names */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col">
-                      <label htmlFor="firstName" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">First Name</label>
+                      <label htmlFor="firstName" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">First Name</label>
                       <input
                         id="firstName"
                         type="text"
                         required
                         placeholder="e.g. John"
-                        className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
+                        className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full"
                         value={formData.firstName}
                         onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                       />
                     </div>
 
                     <div className="flex flex-col">
-                      <label htmlFor="lastName" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Last Name</label>
+                      <label htmlFor="lastName" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Last Name</label>
                       <input
                         id="lastName"
                         type="text"
                         required
                         placeholder="e.g. Doe"
-                        className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
+                        className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full"
                         value={formData.lastName}
                         onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                       />
@@ -894,23 +894,23 @@ export default function Home() {
                   {/* Row 2 - Email & Phone */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col">
-                      <label htmlFor="email" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Email Address</label>
+                      <label htmlFor="email" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Email Address</label>
                       <input
                         id="email"
                         type="email"
                         required
                         placeholder="e.g. buyer@clinicaltrade.com"
-                        className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
+                        className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
                     </div>
 
                     <div className="flex flex-col">
-                      <label htmlFor="phone" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Phone / WhatsApp</label>
-                      <div className="flex gap-2 items-baseline">
+                      <label htmlFor="phone" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Phone / WhatsApp</label>
+                      <div className="flex gap-2 items-center">
                         <select
-                          className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink focus:border-gold focus:ring-0 focus:outline-none transition-colors w-20 shrink-0"
+                          className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-3 py-3 text-[15px] text-ink focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-24 shrink-0"
                           value={phoneCode}
                           onChange={(e) => setPhoneCode(e.target.value)}
                         >
@@ -925,7 +925,7 @@ export default function Home() {
                           type="tel"
                           required
                           placeholder="e.g. 9032550436"
-                          className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors flex-grow"
+                          className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 flex-grow"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         />
@@ -935,13 +935,13 @@ export default function Home() {
 
                   {/* Row 3 - Company */}
                   <div className="flex flex-col">
-                    <label htmlFor="company" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Company Name</label>
+                    <label htmlFor="company" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Company Name</label>
                     <input
                       id="company"
                       type="text"
                       required
                       placeholder="e.g. Global Pharma Logistics Ltd"
-                      className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
+                      className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     />
@@ -950,18 +950,18 @@ export default function Home() {
                   {/* Row 4 - Dropdowns */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col">
-                      <label htmlFor="country" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Destination Country</label>
+                      <label htmlFor="country" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Destination Country</label>
                       <select
                         id="country"
-                        className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
+                        className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full"
                         value={formData.country}
                         onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                       >
                         {[
-                          "UAE", "Saudi Arabia", "Kenya", "Nigeria", "Egypt",
-                          "Philippines", "Indonesia", "Vietnam", "Germany",
-                          "UK", "USA", "Brazil", "Kazakhstan", "Uzbekistan",
-                          "Sri Lanka", "Qatar", "South Africa", "Other"
+                          "Brazil", "Egypt", "Germany", "India", "Indonesia", "Kazakhstan", 
+                          "Kenya", "Nigeria", "Philippines", "Qatar", "Saudi Arabia", 
+                          "South Africa", "Sri Lanka", "UAE", "UK", "USA", 
+                          "Uzbekistan", "Vietnam", "Other"
                         ].map((c, i) => (
                           <option key={i} value={c} className="text-ink bg-cream">{c}</option>
                         ))}
@@ -969,17 +969,17 @@ export default function Home() {
                     </div>
 
                     <div className="flex flex-col">
-                      <label htmlFor="category" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Product Category</label>
+                      <label htmlFor="category" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Product Category</label>
                       <select
                         id="category"
-                        className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full"
+                        className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full"
                         value={formData.category}
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                       >
                         {[
-                          "Pharmaceutical Generics", "Medical Devices", "Ayurvedic Medicines",
-                          "Herbal Nutraceuticals", "Cosmeceuticals", "Bulk Drugs / RSM",
-                          "APIs", "Specialty Therapeutics", "Multiple Categories"
+                          "APIs", "Ayurvedic Medicines", "Bulk Drugs / RSM",
+                          "Cosmeceuticals", "Herbal Nutraceuticals", "Medical Devices",
+                          "Multiple Categories", "Pharmaceutical Generics", "Specialty Therapeutics"
                         ].map((cat, i) => (
                           <option key={i} value={cat} className="text-ink bg-cream">{cat}</option>
                         ))}
@@ -1014,13 +1014,13 @@ export default function Home() {
 
                   {/* Row 6 - Message */}
                   <div className="flex flex-col">
-                    <label htmlFor="message" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-1 font-semibold">Message or Health Goal</label>
+                    <label htmlFor="message" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Message or Health Goal</label>
                     <textarea
                       id="message"
                       required
                       rows={4}
                       placeholder="Share exact dosage configurations, therapeutic volume demands, and compliance requirements..."
-                      className="border-0 border-b border-ink/15 bg-transparent px-0 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-0 focus:outline-none transition-colors w-full resize-y min-h-[100px]"
+                      className="border border-emerald/15 bg-[#FAF7F2]/50 focus:bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink/30 focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none transition-all duration-200 w-full resize-y min-h-[100px]"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
