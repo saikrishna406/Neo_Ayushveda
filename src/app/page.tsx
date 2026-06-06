@@ -409,7 +409,7 @@ export default function Home() {
                   A prominent public figure, he is a former Member of the Legislative Assembly (MLA) of Andhra Pradesh and served as Government Whip. This background brings a unique combination of administrative policy insight, governance experience, and strong institutional relationships across India's industrial sectors.
                 </p>
                 <p>
-                  Currently serving as the Chairman of the Telangana Government Medical Device Corporation (TGMDC), Mr. Eravathri coordinates direct policy interfaces and possesses an unparalleled grasp of regulatory standards for healthcare devices, clinical manufacturing, and trade logistics.
+                  Currently serving as the Chairman of the Telangana Government Mineral Development Corporation (TGMDC), Mr. Eravathri coordinates direct policy interfaces and possesses an unparalleled grasp of regulatory standards for healthcare devices, clinical manufacturing, and trade logistics.
                 </p>
               </div>
 
@@ -927,8 +927,8 @@ export default function Home() {
                             type="button"
                             onClick={() => handleDocToggle(doc)}
                             className={`px-3 py-1.5 text-[10px] tracking-wide uppercase font-semibold transition-all duration-200 border ${isSelected
-                                ? "bg-emerald text-cream border-emerald"
-                                : "border-ink/15 text-ink/50 hover:border-gold hover:text-gold"
+                              ? "bg-emerald text-cream border-emerald"
+                              : "border-ink/15 text-ink/50 hover:border-gold hover:text-gold"
                               }`}
                           >
                             {doc}
