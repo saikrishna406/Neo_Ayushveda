@@ -210,7 +210,7 @@ export default function HoverFooter() {
       </div>
 
       {/* Text hover effect - NEO */}
-      <div className="lg:flex hidden h-[32rem] -mt-52 -mb-36 relative z-10 pointer-events-auto">
+      <div className="lg:flex hidden h-[18rem] md:h-[24rem] w-full relative z-10 pointer-events-auto mt-12 border-t border-white/5 bg-black/15">
         <TextHoverEffect text="NEO" className="z-20 text-gold" />
       </div>
 
