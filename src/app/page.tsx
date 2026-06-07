@@ -863,7 +863,7 @@ export default function Home() {
                 <form onSubmit={handleFormSubmit} className="space-y-6">
 
                   {/* Row 1 - Names */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col">
                       <label htmlFor="firstName" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">First Name</label>
                       <input
@@ -892,7 +892,7 @@ export default function Home() {
                   </div>
 
                   {/* Row 2 - Email & Phone */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col">
                       <label htmlFor="email" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Email Address</label>
                       <input
@@ -948,7 +948,7 @@ export default function Home() {
                   </div>
 
                   {/* Row 4 - Dropdowns */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col">
                       <label htmlFor="country" className="text-[11px] tracking-[0.12em] uppercase text-ink/40 mb-2.5 font-semibold">Destination Country</label>
                       <select
